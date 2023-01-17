@@ -1,0 +1,74 @@
+<div class="col-md-8 menu rounded">
+    <div class="p-5 mb-4 rounded-3 menu h-100">
+        <h1 class="display-5 text-center fw-bold">Seleccione Pedidos </h1>
+
+        <div class="sub-menu  rounded-3 ">
+            <div class="d-flex">
+                <div class="producto p-2 mx-2 my-2 w-50 ">
+
+                    <div class="bg-primary rounded-3 producto text-center">
+                        <img width="200"
+                            src="https://png.pngtree.com/png-vector/20210226/ourlarge/pngtree-hot-coffee-logo-design-png-png-image_2959689.jpg"
+                            alt="">
+
+                        <h4>{{producto.nombre}}</h4>
+
+                    </div>
+
+                </div>
+                <div class="  p-2 w-50 text-center">
+                    <h4 class="">Extra</h4>
+                    <hr>
+                    <div *ngFor="let e of extras"
+                        class="w-100 bg-primary rounded-3 d-flex px-3 h-50 justify-content-between">
+                        <img class="rounded-3" width="100"
+                            src="https://png.pngtree.com/png-vector/20210226/ourlarge/pngtree-hot-coffee-logo-design-png-png-image_2959689.jpg"
+                            alt="">
+
+                        <h4>{{e.nombre}}</h4>
+
+                        <button (click)="add(e)">Agregar</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 
+    <button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Open My Modal</button> -->
+
+    <ng-template #mymodal let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">CLIENTE</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <!-- <form [formGroup]="form" (ngSubmit)="nombre('Cross click')">
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nombre del Cliente</label>
+                    <input formControlName="nombre" type="text" class="form-control" placeholder="nombre">
+
+                </div>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn w-100 btn-primary" type="submit"> Ok </button>
+                <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+            </div>
+        </form> -->
+    </ng-template>
+</div>
+<div class="col-md-4 ">
+
+    <app-cart #carrito [cart]="cart"  ></app-cart>
+
+
+
+</div>

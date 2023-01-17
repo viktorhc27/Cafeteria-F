@@ -1,0 +1,11 @@
+{
+    "https://webpay3gint.transbank.cl/webpayserver/initTransaction": {
+      "target": "https://webpay3gint.transbank.cl/webpayserver/initTransaction",
+      "secure": false,
+      "logLevel": "debug",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    }
+  }
+  

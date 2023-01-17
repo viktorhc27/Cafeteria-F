@@ -1,0 +1,34 @@
+<div class="pedidos rounded-3 h-100 ">
+    <h1 class="display-5 text-center fw-bold pt-5 ">Pedidos </h1>
+
+    <div *ngIf="cart.length > 0; else vacio">
+        <div *ngFor="let c of datos" style="background-color: #D9D9D9;" class=" mx-3 d-flex justify-content-between">
+
+            <div class="mx-2 my-2">
+                <img class="rounded-3" width="100"
+                    src="https://png.pngtree.com/png-vector/20210226/ourlarge/pngtree-hot-coffee-logo-design-png-png-image_2959689.jpg"
+                    alt="">
+            </div>
+
+            <div class="pt-2">
+                <h4>{{c.nombre}}</h4>
+                <span>${{c.total| currencyChile:true:'1.2'}}</span>
+                <span>cant: {{c.cantidad}}</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn-close btn-close-black ml-auto" aria-label="Cerrar"></button>
+            </div>
+
+
+
+        </div>
+        Total: ${{total| currencyChile:true:'1.2' }}
+
+        <a class="btn btn-primary" (click)="pasarCaja()">Pagar</a>
+
+    </div>
+    <ng-template #vacio>
+        <h3 class="display-5 text-center fw-bold pt-5 ">Carrito vacio </h3>
+    </ng-template>
+
+</div>

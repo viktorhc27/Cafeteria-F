@@ -1,0 +1,30 @@
+<div class="container-fluid ">
+  <div class="row mt-3 mx-2 ">
+    <div class="col-md-8 menu rounded">
+      <div class="p-5 mb-4 rounded-3 menu">
+        <h1 class="display-5 text-center fw-bold">Seleccione Pedidos</h1>
+
+        <div class="d-flex justify-content-between">
+          <div *ngFor=" let p of productos" class=" one p-2 ">
+            <img (click)="temporal(p)" width="300"
+              src="https://png.pngtree.com/png-vector/20210226/ourlarge/pngtree-hot-coffee-logo-design-png-png-image_2959689.jpg"
+              alt="">
+            <h4 class="text-center">{{p.nombre}}</h4>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-4 ">
+
+      <app-cart #carrito [cart]="cart"></app-cart>
+
+
+
+    </div>
+
+  </div>
+</div>
