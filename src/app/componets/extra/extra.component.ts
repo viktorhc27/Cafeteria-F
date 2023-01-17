@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { ExtraService } from 'src/app/services/extra/extra.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+/* import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms'; */
 import { Cart } from '../menu/menu.component';
 import { MenuService } from 'src/app/services/menu/menu.service';
 import { CartService } from 'src/app/services/cart/cart.service';
@@ -17,7 +17,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class ExtraComponent implements OnInit {
   @ViewChild('carrito') carro: CartComponent | undefined;
  
-  form: FormGroup
+ /*  form: UntypedFormGroup */
   prod: Array<any> = []
   producto: any
   extras: Array<any> = []
@@ -30,16 +30,16 @@ export class ExtraComponent implements OnInit {
   constructor(
     private _service: ExtraService,
     private modalService: NgbModal,
-    private formBuilder: FormBuilder,
+  /*   private formBuilder: UntypedFormBuilder, */
     private menuService: MenuService,
     private cartService: CartService,
     private _router: Router,
     private _route: ActivatedRoute
 
   ) {
-    this.form = this.formBuilder.group({
+   /*  this.form = this.formBuilder.group({
       nombre: ['', Validators.required]
-    })
+    }) */
   }
 
   ngOnInit(): void {

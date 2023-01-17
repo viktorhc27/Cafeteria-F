@@ -10,7 +10,7 @@ import { ExtraComponent } from './componets/extra/extra.component';
 //consultas https
 import { HttpClientModule } from '@angular/common/http';
 //formularios
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+/* import { FormsModule, ReactiveFormsModule } from '@angular/forms'; */
 import { ModalComponent } from './componets/modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormComponent } from './componets/form/form.component';
@@ -39,8 +39,8 @@ registerLocaleData(localeEsCl);
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
+/*     FormsModule,
+    ReactiveFormsModule, */
     NgbModule
   ],
   providers: [],
